@@ -99,6 +99,41 @@ sass --watch SCSS/style.scss CSS/style.css
     border-bottom: 4px solid #08A6E4;
   }
 }
+.footer {
+  background: #FFFFFF;
+  height: 90px;
+  box-shadow: 0px -4px 40px #A5A5A5;
+}
+.footer__text {
+  float: left;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.footer__text h1 {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 26px;
+  color: #08A6E4;
+}
+.footer__text p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 11px;
+  color: #A5A5A5;
+}
+.footer__social {
+  float: right;
+  margin-top: 30px;
+}
+.footer__social img {
+  width: 25px;
+  height: 25px;
+}
+.footer__facebook {
+  margin-right: 25px;
+  margin-left: 5px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

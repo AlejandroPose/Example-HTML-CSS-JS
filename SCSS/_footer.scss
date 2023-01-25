@@ -1,0 +1,47 @@
+@import "variables";
+
+.footer {
+    background: $colorBlanco;
+    height: 90px;
+    box-shadow: 0px -4px 40px $colorGris;
+
+    &__text {
+        float: left;
+        margin-left: 25px;
+        margin-top: 20px;
+
+        h1 {
+            font: {
+                family: $fontFamilyTitulos;
+                weight: 300;
+                size: 26px;
+            }   
+            color: $colorAzul;
+        }
+
+        p {
+            font: {
+                family: $fontFamilyTextos;
+                weight: 400;
+                size: 11px;
+            }  
+            color: $colorGris;
+        }
+    }
+
+    &__social {
+        float: right;
+        margin-top: 30px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+    }
+
+    &__facebook {
+        margin-right: 25px;
+        margin-left: 5px;
+    }
+}

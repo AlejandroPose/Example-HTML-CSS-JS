@@ -2,7 +2,9 @@
 sass --watch SCSS/style.scss CSS/style.css
 */
 
+@import "variables";
 @import "header";
+@import "footer";
 
 * {
     box-sizing: border-box;
