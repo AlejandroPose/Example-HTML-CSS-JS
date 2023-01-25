@@ -5,7 +5,7 @@ sass --watch SCSS/style.scss CSS/style.css
   width: 100%;
   min-height: 70px;
   background: #FFFFFF;
-  box-shadow: 0px 4px 4px #A5A5A5;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 .header h1 {
   float: left;
@@ -99,6 +99,63 @@ sass --watch SCSS/style.scss CSS/style.css
     border-bottom: 4px solid #08A6E4;
   }
 }
+.openingSection {
+  padding-top: 100px;
+  background: #FFFFFF;
+}
+.openingSection__text {
+  margin: 0 40px;
+}
+.openingSection__text h2 {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 35px;
+  text-align: center;
+  color: #000000;
+}
+.openingSection__text p {
+  margin-top: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
+}
+.openingSection__text button {
+  margin-top: 40px;
+  width: 100%;
+  border: none;
+  background: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px;
+}
+.openingSection__img {
+  width: 100%;
+  height: 270px;
+  margin-top: 50px;
+  background-image: url(../img/Background.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1000px) {
+  .openingSection__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .openingSection__text button {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+}
 .footer {
   background: #FFFFFF;
   height: 90px;
@@ -128,6 +185,7 @@ sass --watch SCSS/style.scss CSS/style.css
 .footer__social img {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 .footer__facebook {
   margin-right: 25px;
