@@ -1,3 +1,104 @@
+/* COMANDO SASS
+sass --watch SCSS/style.scss CSS/style.css
+*/
+.header {
+  width: 100%;
+  min-height: 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px #A5A5A5;
+}
+.header h1 {
+  float: left;
+  height: 100%;
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 32px;
+  color: #08A6E4;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.header input {
+  display: none;
+}
+.header label {
+  float: right;
+  height: 100%;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+.header label div {
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/Menu.png);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.header nav {
+  clear: both;
+  height: 0;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.header nav ul {
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.header nav ul li {
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.header nav ul li a {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #A5A5A5;
+}
+.header nav ul li:hover a {
+  color: #000000;
+}
+.header input:checked ~ nav {
+  height: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.header input:checked + label div {
+  background-image: url(../img/Close.png);
+}
+
+@media only screen and (min-width: 1000px) {
+  .header label {
+    display: none;
+  }
+  .header nav {
+    clip-path: none;
+    float: right;
+    clear: none;
+    margin-right: 30px;
+    height: 70px;
+  }
+  .header nav ul {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+  }
+  .header nav ul li {
+    margin: 0;
+    height: 100%;
+  }
+  .header nav ul li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .header nav ul li:hover {
+    border-bottom: 4px solid #08A6E4;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

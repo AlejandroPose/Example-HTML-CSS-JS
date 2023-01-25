@@ -1,7 +1,150 @@
+$fontFamilyTitulos: 'Raleway';
+$fontFamilyTextos: 'Open Sans';
+$colorAzul: #08A6E4;
+$colorNegro: #000000;
+$colorGris: #A5A5A5;
+$colorBlanco: #FFFFFF;
+
 .header {
-    background-color: aqua;
+    width: 100%;
+    min-height: 70px;
+    background: $colorBlanco;
+    box-shadow: 0px 4px 4px $colorGris;
+
+    h1 {
+        float: left;
+        height: 100%;
+        font: {
+            family: $fontFamilyTitulos;
+            weight: 300;
+            size: 32px;
+        }
+        color: $colorAzul;
+        margin: {
+            top: 15px;
+            left: 30px;
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        float: right;
+        height: 100%;
+        margin: {
+            top: 25px;
+            right: 30px;
+        }
+
+        div { 
+            width: 15px;
+            height: 15px;
+            background: {
+                image: url(../img/Menu.png);
+                position: center;
+                size: cover;
+            }
+            cursor: pointer;
+        }
+    }
+
+    nav {
+        clear: both;
+        height: 0;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+        ul {
+            list-style: none;
+            padding: {
+                top: 20px;
+                bottom: 20px;
+            }
+
+            li {
+                margin: {
+                    top: 10px;
+                    left: 30px;
+                    bottom: 10px;
+                }
+
+                a {
+                    font: {
+                        family: $fontFamilyTextos;
+                        weight: 700;
+                        size: 11px;
+                    }
+                    letter-spacing: 3.28px;
+                    text: {
+                        transform: uppercase;
+                        decoration: none;
+                    }
+                    color: $colorGris;
+                }
+            }
+
+            li:hover {
+                a {
+                    color: $colorNegro;
+                }
+            }
+        }
+    }
+
+    input:checked ~ nav {
+        height: auto;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    input:checked + label {
+        div {
+            background-image: url(../img/Close.png);
+        }
+    }
+
 }
-/*
-git config --global user.email alepose.ve@gmail.com
-git config --global user.name "AlejandroPose"
-*/
+
+@media only screen and (min-width: 1000px) {
+
+    .header {
+
+        label {
+            display: none;
+
+        }
+
+        nav {
+            clip-path: none;
+            float: right;
+            clear: none;
+            margin-right: 30px;
+            height: 70px;
+
+            ul {
+                height: 100%;
+                padding: 0;
+                display: flex;
+                gap: 60px;
+
+                li {
+                    margin: 0;
+                    height: 100%;
+
+                    a {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                li:hover {
+                    border-bottom: 4px solid $colorAzul;
+                }
+
+            }
+        }
+        
+
+    }
+
+}
