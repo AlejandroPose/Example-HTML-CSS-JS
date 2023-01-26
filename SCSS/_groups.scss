@@ -1,0 +1,196 @@
+@import "variables";
+@import "columnas";
+
+$colorFondoGris: #F7F7F7;
+
+.groups {
+    background: $colorFondoGris;
+    padding: 40px 40px;
+
+    .group1, .group2, .group3 {
+        background: $colorBlanco;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        padding: 20px;
+
+        &__logo {
+            margin-top: 40px;
+        }
+        
+        &__img {
+            width: 150px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1000;
+
+            img {
+                width: 100%;
+                position: relative;
+                z-index: 1000;
+            }
+
+            div {
+                width: 90px;
+                height: 90px;
+                background-color: $colorCirculoRosa;
+                margin: 0 auto;
+                border-radius: 41px;
+                transform: rotate(-45deg);
+                margin-left: 50%;
+                margin-top: -120px;
+            }
+        }
+
+        &__info {
+            h3 {
+                font: {
+                    family: $fontFamilyTitulos;
+                    weight: 400;
+                    size: 30px;
+                }
+                color: $colorNegro;
+            }
+
+            p {
+                margin-top: 40px;
+                font: {
+                    family: $fontFamilyTextos;
+                    weight: 400;
+                    size: 14px;
+                }
+                color: $colorNegro;
+            }
+        }
+
+    }
+
+    .group2, .group3 {
+        margin-top: 30px;
+
+        &__logo {
+            margin-top: 0;
+            height: 150px;
+        }
+
+        &__img {
+            div {
+                background: $colorCirculoAzul;
+                border-radius: 50%;
+                margin-left: auto;
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+
+    .lastGroup {
+
+        .group4 {
+            background: $colorCirculoVerde;
+            padding: 10% 20%;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .groups {
+        display: flex;
+        flex-direction: column;
+
+        .group1, .group2 {
+            display: flex;
+            flex-direction: row-reverse;
+
+            &__logo {
+                width: 60%;
+            }
+
+            &__img {
+                width: 300px;
+                
+                div {
+                    margin-top: -200px;
+                    margin-left: 60%;
+                    width: 150px;
+                    height: 150%;
+                }
+            }
+
+            &__info {
+                width: 40%;
+
+                p {
+                    padding-bottom: 40px;
+                }
+
+                div {
+                    width: 70%;
+                    height: 4px;
+                    background-color: $colorCirculoRosa;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        .group2 {
+            flex-direction: row;
+
+            &__img {
+                margin: 0;
+
+                div {
+                    width: 200px;
+                    height: 200px;
+                    margin-left: 15%;
+                }
+            }
+
+            &__info {
+                div {
+                    background-color: $colorCirculoAzul;
+                }
+            }
+        }
+
+        .group3 {
+            &__info {
+                p {
+                    padding-bottom: 40px;
+                }
+
+                div {
+                    width: 70%;
+                    height: 4px;
+                    background-color: $colorCirculoVerde;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        .lastGroup {
+            display: flex;
+            gap: 30px;
+
+            .group3 {
+                width: 60%;
+            }
+
+            .group4 {
+                margin-top: 30px;
+                width: 40%;
+                padding: 5%;
+            }
+        }
+
+    }
+
+}
