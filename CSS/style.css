@@ -156,6 +156,79 @@ sass --watch SCSS/style.scss CSS/style.css
     width: 50%;
   }
 }
+.columnas {
+  padding: 80px 0;
+}
+.columnas h2 {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.columna1, .columna2, .columna3 {
+  padding-top: 60px;
+}
+.columna1__forma, .columna2__forma, .columna3__forma {
+  width: 63px;
+  height: 63px;
+  background: #FB3B64;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.columna1__img, .columna2__img, .columna3__img {
+  margin: 0 auto;
+  width: 1px;
+  margin-top: -60px;
+}
+.columna1 h4, .columna2 h4, .columna3 h4 {
+  margin-top: 20px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 5.96px;
+  color: #000000;
+}
+.columna1 p, .columna2 p, .columna3 p {
+  padding: 0 20%;
+  margin-top: 20px;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 5.96px;
+  color: #000000;
+}
+
+.columna2__forma {
+  background: #08A6E4;
+}
+.columna2__img {
+  width: 20px;
+  margin-top: -50px;
+}
+
+.columna3__forma {
+  background: #55DFB4;
+}
+
+@media only screen and (min-width: 1000px) {
+  .columnas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .columnas .columna {
+    width: 100%;
+  }
+  .columnas .columna1, .columnas .columna2, .columnas .columna3 {
+    width: 33%;
+  }
+}
 .footer {
   background: #FFFFFF;
   height: 90px;
