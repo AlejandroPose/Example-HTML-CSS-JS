@@ -92,7 +92,7 @@ $colorFondoGris: #F7F7F7;
             border: 1px solid #E8E9ED;
             border-radius: 5px;
 
-            img {
+            &__img {
                 width: 100%;
             }
         }
@@ -137,6 +137,12 @@ $colorFondoGris: #F7F7F7;
             }
         }
 
+        .group1 {
+            &__logo {
+                margin-top: 80px;
+            }
+        }
+
         .group2 {
             flex-direction: row;
 
@@ -144,6 +150,10 @@ $colorFondoGris: #F7F7F7;
                 div {
                     background-color: $colorAzul;
                 }
+            }
+
+            &__logo {
+                margin-top: 10px;
             }
         }
 
@@ -173,7 +183,20 @@ $colorFondoGris: #F7F7F7;
             .group4 {
                 margin-top: 30px;
                 width: 40%;
-                padding: 5%;
+                padding: 2%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &__img {
+                    width: 70%;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
 

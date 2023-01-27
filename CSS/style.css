@@ -370,7 +370,7 @@ sass --watch SCSS/style.scss CSS/style.css
   border: 1px solid #E8E9ED;
   border-radius: 5px;
 }
-.groups .lastGroup .group4 img {
+.groups .lastGroup .group4__img {
   width: 100%;
 }
 
@@ -404,11 +404,17 @@ sass --watch SCSS/style.scss CSS/style.css
     background-color: #FB3B64;
     margin-bottom: 40px;
   }
+  .groups .group1__logo {
+    margin-top: 80px;
+  }
   .groups .group2 {
     flex-direction: row;
   }
   .groups .group2__info div {
     background-color: #08A6E4;
+  }
+  .groups .group2__logo {
+    margin-top: 10px;
   }
   .groups .group3__info p {
     padding-bottom: 40px;
@@ -429,7 +435,18 @@ sass --watch SCSS/style.scss CSS/style.css
   .groups .lastGroup .group4 {
     margin-top: 30px;
     width: 40%;
-    padding: 5%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .groups .lastGroup .group4__img {
+    width: 70%;
+  }
+  .groups .lastGroup .group4 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .pricing h2 {
