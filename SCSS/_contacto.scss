@@ -1,0 +1,133 @@
+@import "variables";
+
+.contacto {
+    padding: 30px;
+
+    &__info {
+        h2 {
+            font: {
+                family: $fontFamilyTitulos;
+                weight: 400;
+                size: 40px;
+            }
+            color: $colorNegro;
+        }
+        h4 {
+            margin-top: 10px;
+            font: {
+                family: $fontFamilyTextos;
+                weight: 400;
+                size: 16px;
+            }
+            color: $colorNegro;
+        }
+        p {
+            font: {
+                family: $fontFamilyTextos;
+                weight: 600;
+                size: 16px;
+            }
+            color: $colorGris;
+
+            img {
+                transform: translateY(10px);
+            }
+        }
+    }
+
+    &__mail {
+        margin-top: 40px;
+    }
+
+    .form {
+        padding: 30px 0;
+
+        &__inputName, &__inputEmail {
+            width: 100%;
+            padding-top: 20px;
+            border: none;
+            border-bottom: 1px solid $colorGris;
+        }
+
+        &__name, &__email {
+            display: block;
+            margin-top: 20px;
+            font: {
+                family: $fontFamilyTextos;
+                weight: 600;
+                size: 11px;
+            }
+            color: $colorAzul;
+            letter-spacing: 3.28px;
+            text-transform: uppercase;
+        }
+
+        &__politicas {
+            display: inline-block;
+            margin-top: 30px;
+            
+            p{
+                font: {
+                    family: $fontFamilyTextos;
+                    weight: 400;
+                    size: 12px;
+                }
+                color: $colorGris;
+                float: right;
+                width: 85%;
+            }
+
+            input {
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                appearance: none;
+                border: 2px solid $colorGris;
+                border-radius: 4px;
+            }
+            input:checked {
+                background-image: url(../img/Checkmark.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            input:disabled {
+                background-image: none;
+            }
+        }
+
+        &__submit {
+            font: {
+                family: $fontFamilyTextos;
+                weight: 700;
+                size: 13px;
+            }
+            color: $colorBlanco;
+            background-color: $colorAzul;
+            width: 70%;
+            text-align: center;
+            border: none;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            border-radius: 35px;
+            padding: 20px 0;
+            margin: 30px 0;
+            transform: translateX(40%);
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contacto {
+        display: flex;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .form {
+            width: 40%;
+            padding-top: 0;
+        }
+    }
+}

@@ -577,6 +577,111 @@ sass --watch SCSS/style.scss CSS/style.css
     padding-bottom: 20px;
   }
 }
+.contacto {
+  padding: 30px;
+}
+.contacto__info h2 {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 40px;
+  color: #000000;
+}
+.contacto__info h4 {
+  margin-top: 10px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.contacto__info p {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  color: #A5A5A5;
+}
+.contacto__info p img {
+  transform: translateY(10px);
+}
+.contacto__mail {
+  margin-top: 40px;
+}
+.contacto .form {
+  padding: 30px 0;
+}
+.contacto .form__inputName, .contacto .form__inputEmail {
+  width: 100%;
+  padding-top: 20px;
+  border: none;
+  border-bottom: 1px solid #A5A5A5;
+}
+.contacto .form__name, .contacto .form__email {
+  display: block;
+  margin-top: 20px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 11px;
+  color: #08A6E4;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+}
+.contacto .form__politicas {
+  display: inline-block;
+  margin-top: 30px;
+}
+.contacto .form__politicas p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 12px;
+  color: #A5A5A5;
+  float: right;
+  width: 85%;
+}
+.contacto .form__politicas input {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  appearance: none;
+  border: 2px solid #A5A5A5;
+  border-radius: 4px;
+}
+.contacto .form__politicas input:checked {
+  background-image: url(../img/Checkmark.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.contacto .form__politicas input:disabled {
+  background-image: none;
+}
+.contacto .form__submit {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+  background-color: #08A6E4;
+  width: 70%;
+  text-align: center;
+  border: none;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 35px;
+  padding: 20px 0;
+  margin: 30px 0;
+  transform: translateX(40%);
+}
+
+@media only screen and (min-width: 1000px) {
+  .contacto {
+    display: flex;
+  }
+  .contacto__container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .contacto .form {
+    width: 40%;
+    padding-top: 0;
+  }
+}
 .footer {
   background: #FFFFFF;
   height: 90px;
