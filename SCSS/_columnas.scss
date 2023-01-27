@@ -1,9 +1,5 @@
 @import "variables";
 
-$colorCirculoRosa: #FB3B64;
-$colorCirculoAzul: #08A6E4;
-$colorCirculoVerde: #55DFB4;
-
 .columnas {
     padding: 80px 0;
 
@@ -24,7 +20,7 @@ $colorCirculoVerde: #55DFB4;
     &__forma {
         width: 63px;
         height: 63px;
-        background: $colorCirculoRosa;
+        background: $colorRosa;
         margin: 0 auto;
         border-radius: 50%;
     }
@@ -63,7 +59,7 @@ $colorCirculoVerde: #55DFB4;
 
 .columna2 {
     &__forma {
-        background: $colorCirculoAzul;
+        background: $colorAzul;
     }
 
     &__img {
@@ -74,7 +70,7 @@ $colorCirculoVerde: #55DFB4;
 
 .columna3 {
     &__forma {
-        background: $colorCirculoVerde;
+        background: $colorVerde;
     }
 }
 

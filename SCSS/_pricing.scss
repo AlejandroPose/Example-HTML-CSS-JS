@@ -1,0 +1,197 @@
+@import "variables";
+
+.pricing {
+
+    h2 {
+        margin-top: 30px;
+        text-align: center;
+        font: {
+            family: $fontFamilyTitulos;
+            weight: 400;
+            size: 36px;
+        }
+        color: $colorNegro;
+    }
+
+    .basic, .professional, .premium {
+        padding: 30px;
+
+        &__precio {
+            float: left;
+            width: 50%;
+            transform: translateY(50%);
+
+            h3 {
+                font: {
+                    family: $fontFamilyTitulos;
+                    weight: 700;
+                    size: 20px;
+                }
+                text-align: center;
+                color: $colorNegro;
+            }
+            h4 {
+                font: {
+                    family: $fontFamilyTextos;
+                    weight: 300;
+                    size: 46px;
+                }
+                text-align: center;
+                color: $colorRosa;
+            }
+        }
+
+        &__lista {
+            float: right;
+            width: 50%;
+            padding-left: 20px;
+
+            ul {
+                list-style: none;
+                li {
+                    padding: 10px 0;
+                    img {
+                        margin-right: 10px;
+                    }
+                    font: {
+                        family: $fontFamilyTextos;
+                        weight: 400;
+                        size: 14px;
+                    }
+                    color: $colorNegro;
+                }
+            }
+        }
+
+        &__info {
+            padding: 20px;
+            border: 1px solid $colorRosa;
+            border-radius: 18px;
+            width: 100%;
+            display: inline-block;
+        }
+
+        button {
+            background: $colorRosa;
+            border: none;
+            border-radius: 23px;
+            width: 50%;
+            padding: 15px 0;
+            margin-left: 50%;
+            transform: translate(-50%, -50%);
+            font: {
+                family: $fontFamilyTextos;
+                weight: 700;
+                size: 13px;
+            }
+            color: $colorBlanco;
+        }
+
+    }
+
+    .professional, .premium {
+        &__precio {
+            p {
+                font: {
+                    family: $fontFamilyTextos;
+                    weight: 700;
+                    size: 12px;
+                }
+                text-align: center;
+                color: $colorNegro;
+            }
+        }
+    }
+
+    .basic {
+        &__precio {
+            p {
+                visibility: hidden;
+            }
+        }
+    }
+
+    .professional {
+        &__info {
+            border-color: $colorAzul;
+        }
+        &__precio {
+            h4 {
+                color: $colorAzul;
+            }
+        }
+        button {
+            background-color: $colorAzul;
+        }
+    }
+
+    .premium {
+        &__info {
+            border-color: $colorVerde;
+        }
+        &__precio {
+            h4 {
+                color: $colorVerde;
+            }
+        }
+        button {
+            background-color: $colorVerde;
+        }
+    }
+
+    .basic:hover, .premium:hover, .professional:hover {
+        transform: scale(1.05);
+    }
+
+    .basic {
+        &__info:hover {
+            box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.29);
+        }
+    }
+
+    .professional {
+        &__info:hover {
+            box-shadow: 5px 10px 27px rgba(8, 166, 228, 0.29);
+        }
+    }
+
+    .premium {
+        &__info:hover {
+            box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.29);
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .pricing {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            width: 100%;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .basic, .professional, .premium {
+            &__precio {
+                width: 100%;
+                float: unset;
+                transform: translateY(0);
+            }
+            &__lista {
+                width: 100%;
+                float: unset;
+                padding-left: 0;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+}

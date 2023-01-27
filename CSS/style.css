@@ -443,6 +443,140 @@ sass --watch SCSS/style.scss CSS/style.css
     padding: 5%;
   }
 }
+.pricing h2 {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 36px;
+  color: #000000;
+}
+.pricing .basic, .pricing .professional, .pricing .premium {
+  padding: 30px;
+}
+.pricing .basic__precio, .pricing .professional__precio, .pricing .premium__precio {
+  float: left;
+  width: 50%;
+  transform: translateY(50%);
+}
+.pricing .basic__precio h3, .pricing .professional__precio h3, .pricing .premium__precio h3 {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+}
+.pricing .basic__precio h4, .pricing .professional__precio h4, .pricing .premium__precio h4 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 46px;
+  text-align: center;
+  color: #FB3B64;
+}
+.pricing .basic__lista, .pricing .professional__lista, .pricing .premium__lista {
+  float: right;
+  width: 50%;
+  padding-left: 20px;
+}
+.pricing .basic__lista ul, .pricing .professional__lista ul, .pricing .premium__lista ul {
+  list-style: none;
+}
+.pricing .basic__lista ul li, .pricing .professional__lista ul li, .pricing .premium__lista ul li {
+  padding: 10px 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+.pricing .basic__lista ul li img, .pricing .professional__lista ul li img, .pricing .premium__lista ul li img {
+  margin-right: 10px;
+}
+.pricing .basic__info, .pricing .professional__info, .pricing .premium__info {
+  padding: 20px;
+  border: 1px solid #FB3B64;
+  border-radius: 18px;
+  width: 100%;
+  display: inline-block;
+}
+.pricing .basic button, .pricing .professional button, .pricing .premium button {
+  background: #FB3B64;
+  border: none;
+  border-radius: 23px;
+  width: 50%;
+  padding: 15px 0;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+.pricing .professional__precio p, .pricing .premium__precio p {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  color: #000000;
+}
+.pricing .basic__precio p {
+  visibility: hidden;
+}
+.pricing .professional__info {
+  border-color: #08A6E4;
+}
+.pricing .professional__precio h4 {
+  color: #08A6E4;
+}
+.pricing .professional button {
+  background-color: #08A6E4;
+}
+.pricing .premium__info {
+  border-color: #55DFB4;
+}
+.pricing .premium__precio h4 {
+  color: #55DFB4;
+}
+.pricing .premium button {
+  background-color: #55DFB4;
+}
+.pricing .basic:hover, .pricing .premium:hover, .pricing .professional:hover {
+  transform: scale(1.05);
+}
+.pricing .basic__info:hover {
+  box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.29);
+}
+.pricing .professional__info:hover {
+  box-shadow: 5px 10px 27px rgba(8, 166, 228, 0.29);
+}
+.pricing .premium__info:hover {
+  box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.29);
+}
+
+@media only screen and (min-width: 1000px) {
+  .pricing {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing h2 {
+    width: 100%;
+  }
+  .pricing__container {
+    display: flex;
+    justify-content: center;
+  }
+  .pricing .basic__precio, .pricing .professional__precio, .pricing .premium__precio {
+    width: 100%;
+    float: unset;
+    transform: translateY(0);
+  }
+  .pricing .basic__lista, .pricing .professional__lista, .pricing .premium__lista {
+    width: 100%;
+    float: unset;
+    padding-left: 0;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
 .footer {
   background: #FFFFFF;
   height: 90px;

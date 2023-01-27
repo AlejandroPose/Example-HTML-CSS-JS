@@ -7,6 +7,8 @@ sass --watch SCSS/style.scss CSS/style.css
 @import "openingSection";
 @import "columnas";
 @import "groups";
+@import "pricing";
+@import "form";
 @import "footer";
 
 * {
