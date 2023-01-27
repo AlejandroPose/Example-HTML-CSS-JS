@@ -385,15 +385,12 @@ sass --watch SCSS/style.scss CSS/style.css
   }
   .groups .group1__logo, .groups .group2__logo {
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .groups .group1__img, .groups .group2__img {
-    width: 300px;
-  }
-  .groups .group1__img div, .groups .group2__img div {
-    margin-top: -200px;
-    margin-left: 60%;
-    width: 150px;
-    height: 150%;
+    transform: scale(1.5);
   }
   .groups .group1__info, .groups .group2__info {
     width: 40%;
@@ -409,14 +406,6 @@ sass --watch SCSS/style.scss CSS/style.css
   }
   .groups .group2 {
     flex-direction: row;
-  }
-  .groups .group2__img {
-    margin: 0;
-  }
-  .groups .group2__img div {
-    width: 200px;
-    height: 200px;
-    margin-left: 15%;
   }
   .groups .group2__info div {
     background-color: #08A6E4;
@@ -575,6 +564,9 @@ sass --watch SCSS/style.scss CSS/style.css
     padding-left: 0;
     text-align: center;
     padding-bottom: 20px;
+  }
+  .pricing .basic__info, .pricing .professional__info, .pricing .premium__info {
+    padding: 30px 60px;
   }
 }
 .contacto {

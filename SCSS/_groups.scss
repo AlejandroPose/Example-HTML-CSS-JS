@@ -112,17 +112,13 @@ $colorFondoGris: #F7F7F7;
 
             &__logo {
                 width: 60%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             &__img {
-                width: 300px;
-                
-                div {
-                    margin-top: -200px;
-                    margin-left: 60%;
-                    width: 150px;
-                    height: 150%;
-                }
+                transform: scale(1.5);
             }
 
             &__info {
@@ -143,16 +139,6 @@ $colorFondoGris: #F7F7F7;
 
         .group2 {
             flex-direction: row;
-
-            &__img {
-                margin: 0;
-
-                div {
-                    width: 200px;
-                    height: 200px;
-                    margin-left: 15%;
-                }
-            }
 
             &__info {
                 div {
