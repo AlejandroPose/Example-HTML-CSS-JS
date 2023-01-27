@@ -441,12 +441,10 @@ sass --watch SCSS/style.scss CSS/style.css
     align-items: center;
   }
   .groups .lastGroup .group4__img {
-    width: 70%;
+    width: 100%;
   }
   .groups .lastGroup .group4 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
   }
 }
 .pricing h2 {

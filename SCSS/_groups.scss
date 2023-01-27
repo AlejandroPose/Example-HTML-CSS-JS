@@ -189,13 +189,11 @@ $colorFondoGris: #F7F7F7;
                 align-items: center;
 
                 &__img {
-                    width: 70%;
+                    width: 100%;
                 }
 
                 div {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    margin: 0 auto;
                 }
             }
         }
