@@ -3,6 +3,7 @@ sass --watch SCSS/style.scss CSS/style.css
 */
 
 @import "variables";
+@import 'js';
 @import "header";
 @import "openingSection";
 @import "columnas";

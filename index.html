@@ -22,20 +22,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.min.css">
+
 </head>
 
 <body>
+
+    <div class="scroll1"><div class="scroll2" id="scroll2"></div></div>
+
+    <!-- BOTON DE IR ARRIBA -->
+    <div id="btn-top" onclick="subirScroll();">
+        <span class="fas fa-angle-up"></span>
+   </div>
 
     <header class="header">
 
         <h1>OXYGENShop</h1>
 
         <input type="checkbox" id="btn-menu">
-        <label for="btn-menu">
+        <label for="btn-menu" id="labelMenu" onclick="showNav();">
             <div></div>
         </label>
 
-        <nav>
+        <nav id="navMenu">
             <ul>
                 <li><a href="">Why us</a></li>
                 <li><a href="">Benefits</a></li>
@@ -257,9 +267,9 @@
                 </div>
             </div>
 
-            <form action="" class="form">
+            <form action="" class="form" id="formulario">
                 <label for="name" class="form__name">Name</label>
-                <input type="text" name="name" id="name" class="form__inputName">
+                <input type="text" name="name" id="nombre" class="form__inputName">
                 <label for="email" class="form__email">Email</label>
                 <input type="text" name="email" id="email" class="form__inputEmail">
                 <div class="form__politicas">
@@ -296,6 +306,8 @@
         </div>
 
     </footer>
+
+    <script src="./index.js"></script>
 
 </body>
 
