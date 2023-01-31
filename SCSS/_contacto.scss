@@ -62,6 +62,10 @@
             text-transform: uppercase;
         }
 
+        &__inputName:focus, &__inputEmail:focus {
+            outline: none;
+        }
+
         &__politicas {
             display: inline-block;
             margin-top: 30px;

@@ -142,6 +142,7 @@
 
     .basic:hover, .premium:hover, .professional:hover {
         transform: scale(1.05);
+        transition: all 0.5s;
     }
 
     .basic {

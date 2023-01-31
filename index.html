@@ -29,12 +29,26 @@
 
 <body>
 
+    <!-- PERCENTAGE SCROLLER -->
     <div class="scroll1"><div class="scroll2" id="scroll2"></div></div>
 
     <!-- BOTON DE IR ARRIBA -->
     <div id="btn-top" onclick="subirScroll();">
         <span class="fas fa-angle-up"></span>
-   </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h6>Subscribe to our newsletter</h6>
+            <form action="" id="popForm">
+                <label for="popEmail">Email</label>
+                <input type="text" name="popEmail" class="popEmail" id="popEmail">
+                <br>
+                <input type="submit" id="popSubmit">
+            </form>
+        </div>
+    </div>
 
     <header class="header">
 
@@ -47,10 +61,10 @@
 
         <nav id="navMenu">
             <ul>
-                <li><a href="">Why us</a></li>
-                <li><a href="">Benefits</a></li>
-                <li><a href="">Prices</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#columnas">Why us</a></li>
+                <li><a href="#groups">Benefits</a></li>
+                <li><a href="#pricing">Prices</a></li>
+                <li><a href="#contacto">Contact</a></li>
             </ul>
         </nav>
 
@@ -71,7 +85,7 @@
 
         </section>
 
-        <section class="columnas">
+        <section class="columnas" id="columnas">
 
             <div class="columna">
                 <h2>The most popular sales platform in country</h2>
@@ -106,7 +120,7 @@
 
         </section>
 
-        <section class="groups">
+        <section class="groups" id="groups">
 
             <article class="group1">
 
@@ -176,9 +190,14 @@
 
         </section>
 
-        <section class="pricing">
+        <section class="pricing" id="pricing">
 
             <h2>Pricing</h2>
+            <select name="conversor" id="conversor" class="conversor" onchange="convertidor();">
+                <option value="eur">€ Euro</option>
+                <option value="usd">$ Dolar</option>
+                <option value="gbp">£ Libra Esterlina</option>
+            </select>
 
             <div class="pricing__container">
                 <article class="basic">
@@ -186,7 +205,7 @@
                     <div class="basic__info">
                         <div class="basic__precio">
                             <h3>Basic</h3>
-                            <h4>$0</h4>
+                            <h4 id="basicPrice">€0</h4>
                             <p>Limited offer</p>
                         </div>
         
@@ -210,7 +229,7 @@
                     <div class="professional__info">
                         <div class="professional__precio">
                             <h3>Professional</h3>
-                            <h4>$25</h4>
+                            <h4 id="professionalPrice">€25</h4>
                             <p>Limited offer</p>
                         </div>
         
@@ -234,7 +253,7 @@
                     <div class="premium__info">
                         <div class="premium__precio">
                             <h3>Premium</h3>
-                            <h4>$60</h4>
+                            <h4 id="premiumPrice">€60</h4>
                             <p>Limited offer</p>
                         </div>
         
@@ -256,7 +275,40 @@
 
         </section>
 
-        <section class="contacto">
+        <section class="imgSlider">
+            <div class="containerSlider">
+                <div class="btnsSlider">
+                    <span id="previo">&#10094;</span>
+                    <span id="ultimo">&#10095;</span>
+                </div>
+                <div class="imagesSlider">
+                    <div class="image fade">
+                        <img src="./img/slider1.jpg" alt="Imagen playa 1">
+                    </div>
+                    <div class="image fade">
+                        <img src="./img/slider2.jpg" alt="Imagen playa 2">
+                    </div>
+                    <div class="image fade">
+                        <img src="./img/slider3.jpg" alt="Imagen playa 3">
+                    </div>
+                    <div class="image fade">
+                        <img src="./img/slider4.jpg" alt="Imagen playa 4">
+                    </div>
+                    <div class="image fade">
+                        <img src="./img/slider5.jpg" alt="Imagen playa 5">
+                    </div>
+                </div>
+                <div class="dotsSlider">
+                    <span class="dot" id="dot1"></span>
+                    <span class="dot" id="dot2"></span>
+                    <span class="dot" id="dot3"></span>
+                    <span class="dot" id="dot4"></span>
+                    <span class="dot" id="dot5"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
 
             <div class="contacto__container">
                 <div class="contacto__info">
@@ -301,8 +353,8 @@
         </div>
 
         <div class="footer__social">
-            <a href="#"><img src="./img/Twitter.png" alt="Logo de Twitter" class="footer__twitter"></a>
-            <a href="#"><img src="./img/Facebook.png" alt="Logo de Facebook" class="footer__facebook"></a>
+            <a href="https://twitter.com/"><img src="./img/Twitter.png" alt="Logo de Twitter" class="footer__twitter"></a>
+            <a href="https://facebook.com/"><img src="./img/Facebook.png" alt="Logo de Facebook" class="footer__facebook"></a>
         </div>
 
     </footer>
