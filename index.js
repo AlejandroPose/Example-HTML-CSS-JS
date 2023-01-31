@@ -1,7 +1,3 @@
-/* ---------------------
-El menú de la vista mobile que aparece solo cuando haces clic en el botón hamburguesa
-*/
-//Al ya estar implementado con CSS el menú hamburguesa se ha realizado lo mismo que con CSS pero con JS
 function showNav() {
   const boton = document.getElementById("btn-menu");
   const nav = document.getElementById("navMenu");
@@ -14,11 +10,6 @@ function showNav() {
   }
 }
 
-/* ---------------------
-Un elemento ‘percentage scroller’ así (solo la barra, no el círculo): 
-https://webdevtrick.com/wp-content/uploads/animated-scroll-percentage-show.mp4 
-*/
-//Se ha creado el percentage scroller en HTML y se le ha dado funcionalidad con JS
 window.addEventListener("scroll", function () {
   const scroller = document.documentElement.scrollTop,
     fullSize = document.documentElement.offsetHeight,
@@ -27,11 +18,6 @@ window.addEventListener("scroll", function () {
   document.getElementById("scroll2").style.width = width + "%";
 });
 
-/* ---------------------
-Crear un botón ‘Return to the top’ al fondo que espera 200 milisegundos 
-y vuelve al principio de la página con una animación suave 
-*/
-//Se ha creado el boton en HTML y se le ha dado funcionalidad con JS
 const btnTop = document.getElementById("btn-top");
 window.addEventListener("scroll", function () {
   const scroller = document.documentElement.scrollTop;
@@ -55,12 +41,6 @@ function subirScroll() {
   window.scrollTo(0, 0);
 }
 
-/* ---------------------
-Implementar validación en el formulario. El nombre tiene que tener entre 2 
-y 100 letras, la dirección de correo electrónico tiene que ser válida 
-(https://www.emailregex.com/) y tienen que hacer el checkbox. 
-Si un campo no es válido, cambiar el color de su border a rojo 
-*/
 const formulario = document.getElementById("formulario");
 const inputNombre = document.getElementById("nombre");
 const inputEmail = document.getElementById("email");
@@ -91,10 +71,6 @@ formulario.addEventListener("submit", async (e) => {
     inputCheck.classList.remove("error");
   }
 
-  /* ---------------------
-Recoger los datos del formulario y mandarselos a un servidor JSON 
-de testing como este https://jsonplaceholder.typicode.com/guide/ con fetch()
-*/
   const result = await fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     body: JSON.stringify({
@@ -109,13 +85,6 @@ de testing como este https://jsonplaceholder.typicode.com/guide/ con fetch()
   console.log("FECTH: " + parsedResult);
 });
 
-/* ---------------------
-Crear un popup (/modal) de ‘Subscribe to our newsletter’ que aparece después de 5 segundos, 
-o cuando el usuario baja 25% de la página.
-Validar la dirección y mandársela al mismo servidor. Habrá 3 maneras de quitarlo, con un botón X, 
-haciendo clic fuera del modal o con la tecla ESC.
-No aparecerá otra vez, después de ser cerrado (con localStorage/sessionStorage).
-*/
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 
@@ -187,33 +156,25 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-/*
-Añadir un selector de moneda (EUR, USD, GBP), 
-obtener los tipos de cambio de esta API https://github.com/fawazahmed0/currency-api#readme 
-(https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json), 
-permitiendo al usuario cambiar la moneda y ver los precios actualizados. 
-*/
+
 async function extraerDatosAPI() {
   await fetch(
     "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json"
   )
     .then((resp) => resp.json())
     .then(function (data) {
-      //console.log(data.eur.usd, data.eur.gbp);
       dolar = data.eur.usd;
       libra = data.eur.gbp;
     })
     .catch(function (error) {
       console.log(error);
     });
-  //console.log(dolar, libra);
   let cambio = [dolar, libra];
   return cambio;
 }
 
 async function convertidor() {
   const selector = document.getElementById("conversor").value;
-  //console.log(selector);
   const cambio = await extraerDatosAPI();
   let dolar = cambio[0],
     libra = cambio[1];
@@ -241,14 +202,7 @@ async function convertidor() {
       break;
   }
 }
-/*
-Crear un ‘Slider’ con esta funcionalidad (botones prev/next, puntos para las imágenes individuales, 
-avanza automáticamente): 
-Después de la sección de precios. El HTML será un <div> con el id ‘slider’, 
-que contiene varios elementos <img />. El JS Será una clase ‘Slider’, cuyo constructor acepta 1 parámetro, 
-un string con el ID del elemento principal (‘slider’). 
-Puedes obtener imágenes de https://librestock.com/. 
-*/
+
 class Slider {
   constructor(slider) {
     this.slider = slider;
@@ -303,4 +257,3 @@ dot2.addEventListener('click', () => slider.currentSlide(2));
 dot3.addEventListener('click', () => slider.currentSlide(3));
 dot4.addEventListener('click', () => slider.currentSlide(4));
 dot5.addEventListener('click', () => slider.currentSlide(5));
-
