@@ -1,2 +1,2 @@
 # Modulo_1
-HTML, CSS, JS y GIT
+HTML, CSS con SASS, JS y GIT
