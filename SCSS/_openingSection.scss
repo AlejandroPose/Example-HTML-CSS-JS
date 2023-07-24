@@ -43,8 +43,11 @@
             text-align: center;
             color: $colorBlanco;
             padding: 20px;
-            cursor: pointer;
         }
+        button:hover {
+            transform: scale(1.1);
+        }
+        
     }
 
     &__img {
