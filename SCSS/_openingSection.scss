@@ -44,12 +44,12 @@
             color: $colorBlanco;
             padding: 20px;
         }
-
-        .btn-op:hover {
-            transform: scale(1.05);
-            transition: all 0.5s;
-        }
         
+    }
+
+    .btn-op:hover {
+        transform: scale(1.05);
+        transition: all 0.5s;
     }
 
     &__img {
