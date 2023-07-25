@@ -43,9 +43,11 @@
             text-align: center;
             color: $colorBlanco;
             padding: 20px;
-            :hover {
-                transform: scale(1.1);
-            }
+        }
+
+        .btn-op:hover {
+            transform: scale(1.05);
+            transition: all 0.5s;
         }
         
     }
