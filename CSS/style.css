@@ -318,7 +318,10 @@ html {
   text-align: center;
   color: #FFFFFF;
   padding: 20px;
-  cursor: pointer;
+}
+.openingSection .btn-op:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
 }
 .openingSection__img {
   width: 100%;
